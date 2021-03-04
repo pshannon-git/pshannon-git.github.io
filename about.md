@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 tags: about
 flicker: true
-headshot: /images/headshot.jpg
+headshot: /images/headshot.png
 ---
 
 I am a Software Engineering student at [RMIT University](https://www.rmit.edu.au/) in Melbourne. Starting November 2016 I will be interning with [Zendesk](https://www.zendesk.com/) in a Data Engineering role.
