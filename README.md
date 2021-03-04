@@ -1,94 +1,169 @@
-# hello: a minimalist template for personal websites on Github Pages
+<p align="center">
+  <img src="mockups/rsz_junior.png"/>
+</p>
 
-## Why **hello**?  
-  
-**hello** has a simple goal: to make GitHub Pages accessible to everyone.  
-  
+# Junior
+-----
 
-**hello** is a minimalist template that lets you design a beautiful website or portfolio on GitHub Pages - without installing a Ruby
-development environment, learning to use Jekyll, **or even typing a single line of code**. It's ideal for GitHubbers
-who want to start building their personal website on [GitHub Pages](https://pages.github.com/), but maybe aren't so familiar with web development.
-  
-
-The default layout of **hello** is a streamlined single page with three major customizable sections: a required "about" section, an optional portfolio, and an optional CTA. Using [Liquid](https://shopify.github.io/liquid/) variables declared by in the config and index files, **hello** offers an easy-to-use design where all customizations necessary for a basic personal website can be written in [Markdown](https://www.markdownguide.org/basic-syntax/). **hello** is adapted from [Twenty](https://html5up.net/twenty), a responsive, mobile-friendly theme by HTML5 Up.  
+*Junior* is a blog/portfolio theme for [Jekyll](http://jekyllrb.com), the static site generator. It's designed and developed by [@jonobelotti_IO](https://twitter.com/jonobelotti_IO).
 
 
-Demo **hello** [here](https://saragong.github.io/hello/).
+See Junior in action with [the demo site](https://juniortheme.live).
 
-## Getting started
-To use **hello**, follow these steps:
+## Contents
 
-1. Click the green "Use this template" button on the main page of the **hello** repository.
+- [Features](#features)
+- [Preview](#preview)
+- [Usage](#usage)
+- [Options](#options)
+  - [Rems, `font-size`, and scaling](#rems-font-size-and-scaling)
+- [Development](#development)
+- [Author](#author)
+- [License](#license)
 
-2. Follow the instructions to create a new repository from **hello**, setting the repository name as "*your-username*.github.io".
+## Features
 
-3. Under **Settings** for this new repo, navigate to the **GitHub Pages** section and ensure that GitHub Pages is enabled for the `master` branch.
+- Blog/Technical posts, with support for code syntax highlighting, `LaTeX` markup, images, footnotes, and font color-highlighting
+- 'Portfolio' section, which emphasises large-image content
+- Markdown resumé, with support for fast and easy PDF printing
+- Connects to your Github profile via their API, in order to display open-source work
+- RSS Feed
+- Contact page, with anti-spam protection
+- Smooth CSS transition elements, and a nice B&W theme
 
-4. On the command line, clone this new repository to your local directory.
+## Preview
 
-```
-$ git clone https://github.com/*your-username*/*your-username*.github.io.git
-```
+> **Note:** These images may be outdated. See http://juniortheme.live/ for latest version of theme
 
-5. Navigate into the project folder, open the `_config.yml` and `index.md` files in your preferred text editor, and start customizing your website!
+##### Landing Page
 
-6. When you're ready to see your work, commit your changes to the remote repo.
-```
-$ git add .
-$ git commit -m "first commit"
-$ git push origin master
-```
+![Junior main page](mockups/junior-front-page.png)
 
-7. In just a few moments, Github will build your shiny new website at "https://*your-username*.github.io/".
+##### Dropdown Menu
+
+![Junior menu dropdown](mockups/junior-menu.png)
+
+##### Example Blog Post
+
+![Junior blog post](mockups/junior-post.png)
+
+##### Resumé
+
+Attractive, no-fuss resumé page that includes a PDF-print link (right) with CSS configured to ensure fidelity between screen and paper page.
+
+![Junior resumé](mockups/junior-resume.png)
+
+##### Open Source Showcase
+
+Connects, using Github's API, with your public profile and pulls your projects (ordered by Stars). Coming soon, you will also be able to showcase significant PRs. *Tag colours are also matched to the project's Github language colour-coding.*
+
+![Junior open source showcase](mockups/junior-open-source.png)
+
+##### Project Portfolio Visual Showcase
+
+![Junior visual portfolio](mockups/junior-main-portfolio.png)
+
+##### Project Page
+
+![Junior project page](mockups/junior-portfolio-single.png)
+
+##### About
+
+![Junior about](mockups/junior-about.png)
+
+##### Contact
+
+![Junior contact](mockups/junior-contact.png)
 
 ## Usage
 
-### The following variables are required:
+### 1. Install dependencies
 
-`_config.yml`:
-* `title`
-* `author`
-* `description`
-* `baseurl`  
+Poole is built on Jekyll and uses its built-in SCSS compiler to generate our CSS. Before getting started, you'll need to install the Jekyll gem:
 
-`index.md`:
-* `banner_title`
-* `banner_subtitle`
-* `background_image`
+```bash
+$ gem install jekyll
+```
 
-### The following variables are optional:
-`index.md`:
-* `favicon`
-* `facebook_username`
-* `twitter_username`
-* `github_username`
-* `linkedin`
-* `google_analytics` (your Google Analytics Tracking ID)
+**Windows users:** Windows users have a bit more work to do, but luckily [@juthilo](https://github.com/juthilo) has your back with his [Run Jekyll on Windows](https://github.com/juthilo/run-jekyll-on-windows) guide.
 
-By declaring these variables, you can include a button that links to an external website or to media.
-* `about_button` (the link)
-* `about_button_label` (the label on the button)
+**Need syntax highlighting?** *Junior* includes support for Pygments or Rouge, so install your gem of choice to make use of the built-in styling. Read more about this [in the Jekyll docs](http://jekyllrb.com/docs/templates/#code_snippet_highlighting).
 
-By declaring these variables, you can include a portfolio showcasing your work and organize your portfolio's items into a custom layout, all without adding any CSS. In addition, you must 1) create an HTML file in the_includes folder for each project with the text you'd like to display, and 2) create a YAML file in the _data folder describing how each project should be shown and categorized. See `/includes/example.html` and `/_data/work.yml` for examples.
-* `portfolio` (the heading for your portfolio and title of your YAML file)
-* `portfolio_description` (a description to be displayed below the heading and above the content)
+### 2a. Quick start
 
-By declaring these variables, you can include a CTA section.
-* `cta` (the heading for your CTA section)
-* `cta_description` (a description to be displayed below the heading and above the content)
-* `cta_button` (a link to an external website or to media)
-* `cta_button_label` (the label on the button)
+To help anyone with any level of familiarity with Jekyll quickly get started, *Junior* includes everything you need for a basic Jekyll site. To that end, just download *Junior* and start up Jekyll.
 
-## Additional Information
-Created by [Sara Gong](https://saragong.github.io/), University of Southern California.  
+### 2b. Roll your own Jekyll site
 
-This work is licensed under the MIT License, which lets you use, modify, and publish adaptations of this template free of charge and without restriction, as long as you preserve all copyright notices and licenses.  
+Folks wishing to use Jekyll's templates and styles can do so with a little bit of manual labor. Download *Junior* and then copy what you need (likely `_layouts/`, `*.html` files, `atom.xml` for RSS, and `public/` for CSS, JS, etc.).
 
-This original theme, of which this is an adaptation, is licensed by HTML5 Up under the [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/).  
+### 3. Running locally
 
-The images from the demo website are from [Unsplash](https://unsplash.com/).
+To see your Jekyll site with *Junior* applied, start a Jekyll server. In Terminal, from `/junior-theme` (or whatever your Jekyll site's root directory is named):
 
-## Theme Information
-Twenty by HTML5 UP  
-html5up.net | @n33co  
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+```bash
+> jekyll serve # You might need "bundle exec jekyll serve"
+```
+Open <http://localhost:4000> in your browser, and voilà.
+
+### 4. Serving it up
+
+If you host your code on GitHub, you can use [GitHub Pages](https://pages.github.com) to host your project.
+
+1. Fork this repo and switch to the `gh-pages` branch.
+  1. If you're [using a custom domain name](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages), modify the `CNAME` file to point to your new domain.
+  2. If you're not using a custom domain name, **modify the `baseurl` in `_config.yml`** to point to your GitHub Pages URL. Example: for a repo at `github.com/username/junior`, use `http://username.github.io/junior/`. **Be sure to include the trailing slash.**
+3. Done! Head to your GitHub Pages URL or custom domain.
+
+No matter your production or hosting setup, be sure to verify the `baseurl` option file and `CNAME` settings. Not applying this correctly can mean broken styles on your site.
+
+## Options
+
+### Google Analytics
+
+In `_config.yml` the option `google_analytics:` is left blank if you don't want to use Google Analytics. Add `true` if you want to use it, and replace `[[[TRACKING ID HERE]]]` with your "Tracking ID". You can get one of those for your new site [here](https://www.google.com/analytics). 
+
+
+### Rems, `font-size`, and scaling
+
+*Junior* is built almost entirely with `rem`s (instead of pixels). `rem`s are like `em`s, but instead of building on the immediate parent's `font-size`, they build on the root element, `<html>`.
+
+By default, we use the following:
+
+```css
+html {
+  font-size: 16px;
+  line-height: 1.5;
+}
+@media (min-width: 38em) {
+  html {
+    font-size: 20px;
+  }
+}
+
+```
+
+To easily scale your site's typography and components, simply customize the base `font-size`s here.
+
+
+## Development
+
+*Junior* has two branches, but only one is used for active development.
+
+- `master` for development.  **All pull requests should be to submitted against `master`. Cheers**
+- `gh-pages` for the hosted site, which includes analytics tracking code. **Please avoid using this branch.**
+
+CSS is handled via Jeykll's built-in Sass compiler. Source Sass files are located in `_sass/`, included into `styles.scss`, and compile to `styles.css`.
+
+#### Running 
+
+`bundle exec jekyll serve`
+
+## Credit
+
+* [Pixyll theme](https://github.com/johnotander/pixyll) was used as a base for development of this theme.
+* [Junior.IO's](http://www.junior.io/) website design served as inspiration for this theme's look.
+
+## License
+
+Open sourced under the [MIT license](LICENSE).
