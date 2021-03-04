@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      How to Cure Depression
-date:       2016-11-14
+date:       2020-02-11
 summary:    Let's break into some of the best answers I could find online.
 categories: Depression
 ---
