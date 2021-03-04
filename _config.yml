@@ -6,7 +6,7 @@ email:       Hannon.ps@protonmail.com
 author:      Patrick S Hannon
 description: "Photography & Projects"
 baseurl:     ""
-url:         "#home"
+url:         "/"
 date_format: "%b %-d, %Y"
 
 # Google services
