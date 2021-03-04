@@ -2,11 +2,11 @@
 ## Site settings                    ##
 ######################################
 title:       PS Hannon
-email:       jonathon.bel.melbourne@gmail.com
-author:      Jonathon Belotti
-description: "A striking black-white Jekyll theme."
+email:       Hannon.ps@protonmail.com
+author:      Patrick S Hannon
+description: "Photography & Projects"
 baseurl:     ""
-url:         "https://juniortheme.live/"
+url:         "pshannon.me"
 date_format: "%b %-d, %Y"
 
 # Google services
