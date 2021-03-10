@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    {{ partial "header.html" . }}
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="row">
+        <div class="three columns">
+          <a class="title" href="/">len.to</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="three columns left-side">
+          {{ partial "nav.html"}}
+          {{ partial "tag-list.html"}}
+        </div>
+        <div class="nine columns right-side">
+          {{ partial "img.html" . }}
+          <div class="row post-tags">
+            <span id="rotate">⟳</span>
+            <a href="{{ .Permalink }}">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</a>
+          </div>
+          <div class="row post-tags">
+              {{ if .Params.Tags }}
+                {{ range $key, $tag := .Params.Tags }}
+                  {{- if ne $key 0 }}, {{ end }}<a href='/tags/{{ $tag | urlize }}'>#{{ $tag | lower }}</a>
+                {{ end }}
+              {{ end }}
+          </div>
+
+        </div>
+      </div>
+    </div>
+    {{ partial "scripts.html" . }}
+  </body>
+</html>
