@@ -162,7 +162,7 @@ search.init();
 
 // Rotate image
 let angle = 0;
-document.getElementById('rotate').addEventListener("click", () => {
+document.getElementById('rotate').addEventListener("click"), () => {
   let img = document.getElementsByTagName('img')[0];
   img.setAttribute("style", `transform: rotate(${angle+=90}deg)`);
 });
