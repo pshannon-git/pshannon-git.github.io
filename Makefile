@@ -1,27 +1,12 @@
-REPO ?= bndw/len.to
-HUGO_VERSION=0.79.1
+PWD ?= $(shell pwd)/
 
-GITSHA=$(shell git rev-parse --short HEAD)
-TAG_COMMIT=$(REPO):$(GITSHA)
-TAG_LATEST=$(REPO):latest
+usage: ### Usage (default)
+	@echo
+	@echo "USAGE:"
+	@echo "   make command [options]"
+	@echo
+	@echo "COMMANDS:"
+	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed 's/^/   /' | sed -e 's/\\$$//' | sed -e 's/#/	/g'
 
-all: dev
-
-.PHONY: build
-build:
-	@docker build -t $(TAG_LATEST) --build-arg HUGO_VERSION=$(HUGO_VERSION) .
-
-.PHONY: run
-run:
-	@docker run --rm -p 8080:80 $(TAG_LATEST)
-
-.PHONY: publish
-publish:
-	docker push $(TAG_LATEST)
-	@docker tag $(TAG_LATEST) $(TAG_COMMIT)
-	docker push $(TAG_COMMIT)
-
-.PHONY: dev
-dev:
-	open http://localhost:1313
-	hugo server
+hugo-server: ## Run Hugo web server and serve the example site
+	cd exampleSite; hugo server --cleanDestinationDir --themesDir ../../ -t hugo-theme-console
